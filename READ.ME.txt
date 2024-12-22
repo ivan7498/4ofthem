@@ -1,0 +1,29 @@
+## Features
+- Displays movies in an interactive Swiper.js slider.
+- Each movie includes:
+  - Title
+  - Poster image
+  - Trailer link
+  - Additional metadata (likes, views, etc.).
+- "Read More" button linking to the movie post.
+- Responsive design.
+
+
+## Installation
+1. Download the plugin or clone the repository:
+   `git clone https://github.com/ivan7498/4ofthem`
+2. Upload the `movie-plugin` folder to the `/wp-content/plugins/` directory.
+3. Activate the plugin through the WordPress "Plugins" menu.
+4. Configure the slider or add custom movie posts to test the functionality.
+
+
+## Requirements
+- WordPress 5.0 or higher
+- PHP 7.4 or higher
+- Swiper.js (automatically enqueued with the plugin)
+
+
+## Usage
+- Add new "movie" posts in WordPress.
+- Use the shortcode `[movie_slider]` to embed the slider on any page.
+- Customize styles by editing the `style.css` file located in the `assets` folder.
