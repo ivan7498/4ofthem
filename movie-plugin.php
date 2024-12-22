@@ -1,20 +1,20 @@
 <?php
 
-// Define constants for the plugin
+// Definiranje konstante za dodatak
 define('MOVIE_PLUGIN_NAMESPACE', 'movie-plugin/v1');
 define('MOVIE_POST_TYPE', 'movie');
 
 
 
 /**
- * Plugin Name: Movie Dodatak
- * Description: Plugin for managing movies and genres with advanced features.
+ * Plugin Name: Movie plugin
+ * Description: Plugin for managing movies and genres with advanced features. 
  * Version: 1.4
  * Author: Ivan K. Uskok 
  */
 
 /**
- * Register the custom post type "Movie".
+ * Register the custom post type "Movie". 
  * This function creates the MOVIE_POST_TYPE post type with associated taxonomies.
  */
 function mp_register_movie_post_type()
@@ -72,7 +72,7 @@ function mp_register_genre_taxonomy()
 }
 add_action('init', 'mp_register_genre_taxonomy');
 
-// Use custom templates from the plugin
+// Korištenje predložaka od strane dodatka
 function mp_movie_templates($template)
 {
     if ('is_singular'(MOVIE_POST_TYPE)) {
@@ -198,7 +198,7 @@ function mp_movies_shortcode($atts)
                 $output .= '<p class="movie-description">No description available.</p>';
             }
 
-            // Display buttons
+            // Prikaži buttone
             $output .= '<div class="movie-buttons">';
             $output .= '<a href="' . esc_url($trailer_url) . '" class="movie-button trailer" target="_blank">Trailer</a>';
             $output .= '<a href="' . get_permalink() . '" class="movie-button read-more">Read More</a>';
@@ -224,7 +224,7 @@ add_shortcode('movies_list', 'mp_movies_shortcode');
 
 
 
-// Shortcode for movie slider
+// Shortcode za movie slider
 function mp_movie_slider_shortcode($atts)
 {
     $atts = shortcode_atts(
@@ -498,7 +498,7 @@ function mp_register_movie_filter_endpoint()
 
 
 
-// Add metabox for Movie Trailer
+// Dodavanje metabox za Movie Trailer
 function add_movie_trailer_metabox()
 {
     add_meta_box(
