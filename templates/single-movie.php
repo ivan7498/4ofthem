@@ -1,7 +1,7 @@
 <?php
 
 /**
- * Template for Single Movie Page
+ * Predložak za Single Movie stranicu
  */
 
 if (!defined('ABSPATH')) {
