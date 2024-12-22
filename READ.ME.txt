@@ -26,4 +26,5 @@
 ## Usage
 - Add new "movie" posts in WordPress.
 - Use the shortcode `[movie_slider]` to embed the slider on any page.
+- Use the short code '[movies_list]' to embde the movie cards to any page.
 - Customize styles by editing the `style.css` file located in the `assets` folder.
