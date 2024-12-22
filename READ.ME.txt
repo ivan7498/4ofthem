@@ -1,30 +1,31 @@
-## Features
-- Displays movies in an interactive Swiper.js slider.
-- Each movie includes:
-  - Title
-  - Poster image
-  - Trailer link
-  - Additional metadata (likes, views, etc.).
-- "Read More" button linking to the movie post.
-- Responsive design.
+Opis dodatka
 
+Ovaj dodatak za WordPress implementira funkcionalnosti vezane za upravljanje sadržajem filmova, uključujući prilagođeni tip sadržaja, Gutenberg blok, kratki kod (shortcode), prilagođene REST API krajnje točke i responzivne elemente. 
 
-## Installation
-1. Download the plugin or clone the repository:
-   `git clone https://github.com/ivan7498/4ofthem`
-2. Upload the `movie-plugin` folder to the `/wp-content/plugins/` directory.
-3. Activate the plugin through the WordPress "Plugins" menu.
-4. Configure the slider or add custom movie posts to test the functionality.
+Funkcionalnosti uključuju:
 
+Prilagođeni tip sadržaja i taksonomije:
+Kreiran je prilagođeni tip sadržaja "Movie".
+Dodana je taksonomija "Genre" i povezana s tipom sadržaja "Movie".
+Implementirane su prilagođene stranice za prikaz (single i archive) s listanjem filmova i detaljima poput naslova, slike, žanra i opisa.
 
-## Requirements
-- WordPress 5.0 or higher
-- PHP 7.4 or higher
-- Swiper.js (automatically enqueued with the plugin)
+Prilagođeni Gutenberg blok:
+Blok za prikaz omiljenih filmskih citata, dostupan samo za tip sadržaja "Movie".
+Polja uključuju citat, ime filma i autora.
 
+Kratki kod za listanje filmova:
+Omogućuje filtriranje filmova prema žanru i broju prikazanih stavki.
 
-## Usage
-- Add new "movie" posts in WordPress.
-- Use the shortcode `[movie_slider]` to embed the slider on any page.
-- Use the short code '[movies_list]' to embde the movie cards to any page.
-- Customize styles by editing the `style.css` file located in the `assets` folder.
+Sekcija slidera:
+Kreirana je responzivna slider sekcija korištenjem biblioteke Swiper.js.
+
+Prilagođeni REST API endpoint i AJAX filtriranje:
+Na stranici arhive dodano je polje za odabir žanra koje poziva prilagođeni REST API putem AJAX-a za filtriranje filmova.
+URL se dinamički ažurira za prikaz filtriranih rezultata.
+
+Shortcodovi: 
+[movies_list] - prikaz liste filmova
+[movie_slider] - prikaz filmova u slideru
+
+Kompatibilnost:
+Radi na PHP verzijama 8.0+.
